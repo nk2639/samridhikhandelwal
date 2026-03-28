@@ -374,8 +374,8 @@ main {
 .painting-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1vw;
-  max-width: 26.4vw;
+  gap: 10px;
+  max-width: min(500px, 90vw);
   margin: 0 auto 4rem;
 }
 .painting-grid .artwork-item {
@@ -721,8 +721,8 @@ body.vop-dark .site-footer {
   .site-nav.open { display: flex; }
 
   .painting-grid {
-    max-width: 65vw;
-    gap: 1vw;
+    max-width: min(420px, 85vw);
+    gap: 8px;
   }
 
   /* Hide dropdown on mobile — Works link navigates to /gallery/ */
@@ -767,6 +767,6 @@ body.vop-dark .site-footer {
 @media (max-width: 480px) {
   .works-grid { grid-template-columns: 1fr; }
   .artwork-grid.three-col { grid-template-columns: 1fr; }
-  .painting-grid { max-width: 90vw; gap: 1vw; }
+  .painting-grid { max-width: 90vw; gap: 6px; }
   h1 { font-size: 1.75rem; }
 }
