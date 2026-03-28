@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samridhi Khandelwal — About</title>
+  <meta name="description" content="About Samridhi Khandelwal — contemporary visual artist from India, based in Jersey City, exploring perception, memory, and inner awareness through painting and installation.">
+  <meta property="og:title" content="Samridhi Khandelwal — About">
+  <meta property="og:url" content="https://samridhiart.uk.eu.org/about/">
+  <link rel="canonical" href="https://samridhiart.uk.eu.org/about/">
+  <link rel="icon" href="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/favicon-32.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/favicon-180.webp">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* ===== Desktop: About1 — Hero + bio card ===== */
+    .about-desktop { display: block; }
+    .about-mobile { display: none; }
+
+    .about-hero {
+      position: relative;
+      height: 65vh;
+      min-height: 400px;
+      overflow: hidden;
+    }
+    .about-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .about-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.55));
+    }
+    .about-hero-text {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      color: #fff;
+    }
+    .about-hero-text h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.25rem;
+    }
+    .about-hero-text p {
+      font-size: 1rem;
+      opacity: 0.85;
+      font-family: var(--sans);
+    }
+    .about-card {
+      max-width: 900px;
+      margin: -3rem auto 0;
+      position: relative;
+      z-index: 2;
+      background: var(--bg);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-card-portrait img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+    .about-card-bio p {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    /* ===== Mobile: About3 — Alternating bands ===== */
+    .about-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 50vh;
+      align-items: center;
+    }
+    .about-band-img img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+    .about-band-text {
+      padding: 3rem;
+      max-width: 520px;
+    }
+    .about-band-text h1 { margin-bottom: 0.5rem; }
+    .about-band-text .label {
+      font-family: var(--sans);
+      font-size: 0.8125rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .about-band-text p {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: #444;
+    }
+    .about-band.reverse { direction: rtl; }
+    .about-band.reverse > * { direction: ltr; }
+
+    .photo-credit {
+      font-size: 0.6875rem;
+      color: #999;
+      letter-spacing: 0.03em;
+      margin-top: 0.4rem;
+    }
+    .about-hero .photo-credit {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+    .about-band-img .photo-credit {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.75rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+    .about-band-img {
+      position: relative;
+    }
+
+    /* ===== Breakpoint: swap layouts ===== */
+    @media (max-width: 768px) {
+      .about-desktop { display: none; }
+      .about-mobile { display: block; }
+
+      .about-band,
+      .about-band.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        min-height: auto;
+      }
+      .about-band-img img {
+        min-height: 250px;
+        max-height: 45vh;
+      }
+      .about-band-text {
+        padding: 2rem 1.25rem;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="site-logo">Samridhi Khandelwal</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav">
+      <div class="nav-dropdown">
+        <a href="/gallery/">Works</a>
+        <div class="nav-dropdown-menu">
+          <a href="/seen-not-seen/">Seen, not Seen</a>
+          <a href="/veils-of-presence/">Veils of Presence</a>
+          <a href="/the-distance-i-carry/">The Distance I Carry</a>
+          <a href="/can-you-see-me-can-you-feel-me/">Can You See Me, Can You Feel Me</a>
+          <a href="/reciprocity-failure/">Unveiling the Veil</a>
+          <a href="/unknown-desires/">Unaware Desires</a>
+          <a href="/empiricism-inside-out/">Empiricism (Inside Out)</a>
+          <a href="/breach-escape-miss/">Breach, Escape, Miss</a>
+          <a href="/reciprocity-failure-2/">Reciprocity Failure</a>
+          <a href="/trapped-with-shadows/">Trapped with Shadows</a>
+          <a href="/veils-of-thought/">Veils of Thought</a>
+          <a href="/earlier-works/">Earlier Works</a>
+        </div>
+      </div>
+      <a href="/about/" class="active">About</a>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Desktop layout: hero + card -->
+    <div class="about-desktop">
+      <div class="about-hero">
+        <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/wp-content/uploads/2024/09/img_9477-card.webp" alt="Samridhi Khandelwal in her studio" loading="eager">
+        <div class="about-hero-overlay"></div>
+        <span class="photo-credit">Photo by Megan Maloy</span>
+        <div class="about-hero-text">
+          <h1>Samridhi Khandelwal</h1>
+          <p>Contemporary visual artist</p>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-portrait">
+          <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/img_2200-thumb.webp" alt="Samridhi Khandelwal" loading="lazy">
+          <span class="photo-credit">Photo by Megan Maloy</span>
+        </div>
+        <div class="about-card-bio">
+          <p>Samridhi Khandelwal is a contemporary visual artist from India, based in Jersey City, New Jersey. Her practice explores perception as a shifting condition, shaped by memory, environment, and inner awareness.</p>
+          <p>Working across oil painting, watercolor, and installation, Khandelwal constructs images and environments that change with light, time, and viewer presence. Her work begins with close observation of everyday moments, reflections, shadows, and architectural fragments, which she reconfigures into visual fields that hold both clarity and ambiguity.</p>
+          <p>At the core of her practice is an interest in how the internal and external continuously inform one another. Through layering, erasure, and controlled gestures, forms emerge and dissolve, resisting fixed meaning. Surfaces remain open, allowing perception to unfold gradually rather than resolve immediately.</p>
+          <p>Her visual language is defined by restrained compositions and a muted, earthy palette. These works do not present singular narratives. They create conditions for stillness and attention, where looking becomes a process of introspection.</p>
+          <p>In her installations, this inquiry extends into space. Using suspended translucent surfaces, light, and shadow, she creates environments that are activated through the viewer&rsquo;s movement. As viewers navigate the work, their presence becomes embedded within it, dissolving the boundary between observer and observed.</p>
+          <p>Khandelwal holds a Master of Fine Art in Painting from Coventry University, United Kingdom, and a Bachelor of Fine Arts from Amity University, India. Her work has been exhibited in the United States and internationally. She was recently part of the Project 14C Residency in Jersey City.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile layout: alternating bands -->
+    <div class="about-mobile">
+      <div class="about-band">
+        <div class="about-band-img">
+          <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/wp-content/uploads/2024/09/img_9477-card.webp" alt="Samridhi Khandelwal in her studio" loading="eager">
+          <span class="photo-credit">Photo by Megan Maloy</span>
+        </div>
+        <div class="about-band-text">
+          <h1>Samridhi Khandelwal</h1>
+          <p class="label">Contemporary Visual Artist</p>
+          <p>Samridhi Khandelwal is a contemporary visual artist from India, based in Jersey City, New Jersey. Her practice explores perception as a shifting condition, shaped by memory, environment, and inner awareness.</p>
+          <p>Working across oil painting, watercolor, and installation, Khandelwal constructs images and environments that change with light, time, and viewer presence. Her work begins with close observation of everyday moments, reflections, shadows, and architectural fragments, which she reconfigures into visual fields that hold both clarity and ambiguity.</p>
+          <p>At the core of her practice is an interest in how the internal and external continuously inform one another. Through layering, erasure, and controlled gestures, forms emerge and dissolve, resisting fixed meaning.</p>
+        </div>
+      </div>
+
+      <div class="about-band reverse">
+        <div class="about-band-img">
+          <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/img_2200-thumb.webp" alt="Samridhi Khandelwal" loading="lazy">
+          <span class="photo-credit">Photo by Megan Maloy</span>
+        </div>
+        <div class="about-band-text">
+          <p>Her visual language is defined by restrained compositions and a muted, earthy palette. These works do not present singular narratives. They create conditions for stillness and attention, where looking becomes a process of introspection.</p>
+          <p>In her installations, this inquiry extends into space. Using suspended translucent surfaces, light, and shadow, she creates environments that are activated through the viewer&rsquo;s movement. As viewers navigate the work, their presence becomes embedded within it, dissolving the boundary between observer and observed.</p>
+          <p>Khandelwal holds a Master of Fine Art in Painting from Coventry University, United Kingdom, and a Bachelor of Fine Arts from Amity University, India. Her work has been exhibited in the United States and internationally. She was recently part of the Project 14C Residency in Jersey City.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025 Samridhi Khandelwal. All rights reserved.
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samridhi Khandelwal — Contemporary Artist</title>
+  <meta name="description" content="Samridhi Khandelwal is a contemporary visual artist creating paintings and installations that shift with light and presence, exploring the space between what is seen and what is felt.">
+  <meta property="og:title" content="Samridhi Khandelwal — Contemporary Artist">
+  <meta property="og:description" content="Paintings and installations that shift with light and presence, exploring the space between what is seen and what is felt.">
+  <meta property="og:image" content="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/wp-content/uploads/2024/09/img_9477-card.webp">
+  <meta property="og:url" content="https://samridhiart.uk.eu.org/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://samridhiart.uk.eu.org/">
+  <link rel="icon" href="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/favicon-32.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/favicon-180.webp">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* Dark homepage override */
+    body.home-dark {
+      background: #1e1c18;
+      color: #e8e6e1;
+    }
+    body.home-dark .site-footer {
+      color: #555;
+      border-top-color: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Hero video orientation switching */
+    .hero-video-portrait { display: none; }
+    @media (orientation: portrait) {
+      .hero-video-landscape { display: none; }
+      .hero-video-portrait { display: block; }
+    }
+
+    /* Instagram icon on hero */
+    .hero-instagram {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 2rem;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+      font-family: var(--sans);
+      letter-spacing: 0.03em;
+      transition: color 0.3s;
+    }
+    .hero-instagram:hover { color: rgba(255, 255, 255, 0.85); }
+    .hero-instagram svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Statement section */
+    .statement-section {
+      padding: 4.5rem 2rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .statement-section p {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+      line-height: 1.8;
+      color: #bbb;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Current work section */
+    .current-work {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem 0;
+    }
+    .current-work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .cw-card {
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .cw-card.dark {
+      background: #28251f;
+      color: #e8e6e1;
+    }
+    .cw-card.light {
+      background: #fff;
+      color: #2a2520;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .cw-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+    .cw-card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .cw-tag {
+      font-family: var(--sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 0.625rem;
+    }
+    .cw-card h3 {
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .cw-card.dark h3 { color: #e8e6e1; }
+    .cw-card.light h3 { color: #2a2520; }
+    .cw-desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      opacity: 0.75;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .cw-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+    .cw-card.dark .cw-link { color: #b89b7a; }
+    .cw-card.light .cw-link { color: #5a4a3a; }
+    .cw-link:hover { opacity: 0.8; }
+
+    .ongoing-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      background: rgba(76, 145, 65, 0.12);
+      color: #4a8f40;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+
+    .section-cta {
+      text-align: center;
+      padding: 0.75rem 2rem 3rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #b89b7a;
+      border: 1px solid rgba(184, 155, 122, 0.3);
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .cta-btn:hover {
+      color: #e8e6e1;
+      border-color: rgba(232, 230, 225, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* About snippet */
+    .about-snippet {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 0;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .about-snippet img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .about-snippet-text {
+      padding-top: 0.25rem;
+    }
+    .about-snippet-text p {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: #999;
+      margin-bottom: 1.5rem;
+    }
+    .recent-exhibitions > .section-cta {
+      padding-top: 1.5rem;
+    }
+
+    /* Recent exhibitions */
+    .recent-exhibitions {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .recent-exhibitions h2 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #e8e6e1;
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+    }
+    .exhibition-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .exhibition-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    .exhibition-list li:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .exhibition-list li:last-child {
+      border-bottom: none;
+    }
+    .exhibition-year {
+      color: #8b7355;
+      font-weight: 500;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      margin-left: 1.5rem;
+    }
+    .exhibition-detail {
+      color: #bbb;
+    }
+    .exhibition-venue {
+      color: #777;
+      font-size: 0.8125rem;
+    }
+    .recent-exhibitions > a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #b89b7a;
+    }
+    .recent-exhibitions > a:hover { color: var(--accent); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero.hero-video {
+        height: auto;
+        position: relative;
+      }
+      .hero-video .hero-bg-video {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .hero-instagram {
+        bottom: 1rem;
+        right: 1.25rem;
+      }
+      .hero-instagram span { display: none; }
+      .statement-section {
+        padding: 3rem 1.25rem;
+      }
+      .current-work {
+        padding: 0 1.25rem 2rem;
+      }
+      .current-work-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-snippet {
+        grid-template-columns: 120px 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 1.25rem 3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-snippet {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .about-snippet img {
+        max-width: 160px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body class="home-dark">
+  <header class="site-header">
+    <a href="/" class="site-logo">Samridhi Khandelwal</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav">
+      <div class="nav-dropdown">
+        <a href="/gallery/">Works</a>
+        <div class="nav-dropdown-menu">
+          <a href="/seen-not-seen/">Seen, not Seen</a>
+          <a href="/veils-of-presence/">Veils of Presence</a>
+          <a href="/the-distance-i-carry/">The Distance I Carry</a>
+          <a href="/can-you-see-me-can-you-feel-me/">Can You See Me, Can You Feel Me</a>
+          <a href="/reciprocity-failure/">Unveiling the Veil</a>
+          <a href="/unknown-desires/">Unaware Desires</a>
+          <a href="/empiricism-inside-out/">Empiricism (Inside Out)</a>
+          <a href="/breach-escape-miss/">Breach, Escape, Miss</a>
+          <a href="/reciprocity-failure-2/">Reciprocity Failure</a>
+          <a href="/trapped-with-shadows/">Trapped with Shadows</a>
+          <a href="/veils-of-thought/">Veils of Thought</a>
+          <a href="/earlier-works/">Earlier Works</a>
+        </div>
+      </div>
+      <a href="/about/">About</a>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero video — clean, no text overlay -->
+    <section class="hero hero-video">
+      <video class="hero-bg-video hero-video-landscape" autoplay muted loop playsinline onloadedmetadata="this.playbackRate=0.5">
+        <source src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/video.mp4" type="video/mp4">
+      </video>
+      <video class="hero-bg-video hero-video-portrait" autoplay muted loop playsinline onloadedmetadata="this.playbackRate=0.5">
+        <source src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/video-portrait.mp4" type="video/mp4">
+      </video>
+      <a href="https://www.instagram.com/samridhi_art/" target="_blank" rel="noopener noreferrer" class="hero-instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <span>@samridhi_art</span>
+      </a>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement-section">
+      <p>There is always a distance between what is seen and what is felt. My work exists within that space.</p>
+    </section>
+
+    <!-- Current work -->
+    <section class="current-work">
+      <div class="current-work-grid">
+
+        <!-- Card 1: Veils of Presence -->
+        <a href="/veils-of-presence/" class="cw-card dark">
+          <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/veils-of-presence/IMG_3550-card.webp" alt="Veils of Presence — installation view" loading="lazy">
+          <div class="cw-card-body">
+            <div class="cw-tag">Installation &middot; 2025 &middot; Jersey City</div>
+            <h3>Veils of Presence</h3>
+            <p class="cw-desc">Rice paper, charcoal, light and shadow. As viewers move through the space, their shadows merge with suspended text and sketches &mdash; blurring presence and absence.</p>
+            <span class="cw-link">View installation &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Card 2: The Distance I Carry -->
+        <a href="/the-distance-i-carry/" class="cw-card light">
+          <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/the-distance-i-carry/folded-light-card.webp" alt="The Distance I Carry — watercolour" loading="lazy">
+          <div class="cw-card-body">
+            <div class="cw-tag">Watercolour &middot; 2024&ndash;ongoing <span class="ongoing-badge">12 of 30</span></div>
+            <h3>The Distance I Carry</h3>
+            <p class="cw-desc">A series of 30 watercolours &mdash; intimate A5 works alongside larger canvases &mdash; tracing the space between proximity and absence, memory and the present moment.</p>
+            <span class="cw-link">View series &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="section-cta" style="padding-top: 2.5rem;">
+        <a href="/gallery/" class="cta-btn">View all works &rarr;</a>
+      </div>
+    </section>
+
+    <!-- About snippet -->
+    <section class="about-snippet">
+      <img src="https://pub-d32d3bcb3e9d49108f6741436071bdb6.r2.dev/assets/images/samridhi-portrait-thumb.webp" alt="Samridhi Khandelwal" loading="lazy">
+      <div class="about-snippet-text">
+        <p>Contemporary visual artist from India, based in Jersey City, NJ, USA. Working across oil painting, watercolour, and installation, her practice explores perception as a shifting condition &mdash; shaped by light, memory, and inner awareness. MA Painting, Coventry University, UK.</p>
+      </div>
+    </section>
+    <div class="section-cta">
+      <a href="/about/" class="cta-btn">Full bio &rarr;</a>
+    </div>
+
+    <!-- Recent exhibitions -->
+    <section class="recent-exhibitions">
+      <h2>Recent Exhibitions</h2>
+      <ul class="exhibition-list">
+        <li>
+          <div>
+            <span class="exhibition-detail">The Affordable Art Show</span><br>
+            <span class="exhibition-venue">Art House Productions, Jersey City, USA</span>
+          </div>
+          <span class="exhibition-year">2025</span>
+        </li>
+        <li>
+          <div>
+            <span class="exhibition-detail">JCAST Open Studios</span><br>
+            <span class="exhibition-venue">Jersey City Art &amp; Studio Tour, Jersey City, USA</span>
+          </div>
+          <span class="exhibition-year">2025</span>
+        </li>
+        <li>
+          <div>
+            <span class="exhibition-detail">We Curate 2!</span><br>
+            <span class="exhibition-venue">Art150 Gallery, Jersey City, USA</span>
+          </div>
+          <span class="exhibition-year">2025</span>
+        </li>
+      </ul>
+    </section>
+    <div class="section-cta">
+      <a href="/cv/" class="cta-btn">Full CV &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025 Samridhi Khandelwal. All rights reserved.
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
