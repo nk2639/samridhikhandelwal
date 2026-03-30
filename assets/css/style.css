@@ -271,10 +271,26 @@ main {
 }
 
 /* ========== Gallery Grid (Works page) ========== */
+.works-section-heading {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.works-section-heading:first-of-type {
+  margin-top: 0;
+}
+
 .works-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .work-card {
@@ -352,6 +368,9 @@ main {
 
 .artwork-grid.three-col {
   grid-template-columns: repeat(3, 1fr);
+}
+.artwork-grid.three-col .artwork-item:only-child {
+  grid-column: 2;
 }
 
 .artwork-item { cursor: pointer; }
