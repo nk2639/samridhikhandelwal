@@ -233,37 +233,6 @@
       color: #666;
     }
 
-    /* Lightbox navigation */
-    .lightbox-prev,
-    .lightbox-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 2.5rem;
-      cursor: pointer;
-      opacity: 0.5;
-      transition: opacity 0.2s;
-      padding: 1rem;
-      line-height: 1;
-      z-index: 1001;
-    }
-    .lightbox-prev:hover,
-    .lightbox-next:hover { opacity: 1; }
-    .lightbox-prev { left: 1rem; }
-    .lightbox-next { right: 1rem; }
-    .lightbox-counter {
-      position: absolute;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255,255,255,0.5);
-      font-size: 0.8125rem;
-      font-family: var(--sans);
-    }
-
     @media (max-width: 768px) {
       .vop-two-col { grid-template-columns: 1fr; gap: 2rem; }
       .vop-meta { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem; }
@@ -273,6 +242,7 @@
       .vop-video-row { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
     }
   </style>
+  <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css">
 </head>
 <body class="vop-dark">
   <header class="site-header">
@@ -432,85 +402,11 @@
     </nav>
   </main>
 
-  <!-- Lightbox with navigation -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
-    <button class="lightbox-next" aria-label="Next">&#8250;</button>
-    <img src="" alt="">
-    <div class="lightbox-counter"></div>
-  </div>
-
   <footer class="site-footer">
     &copy; 2025 Samridhi Khandelwal. All rights reserved.
   </footer>
 
-  <script>
-    /* Mobile Nav Toggle */
-    const navToggle = document.querySelector('.nav-toggle');
-    const siteNav = document.querySelector('.site-nav');
-    if (navToggle && siteNav) {
-      navToggle.addEventListener('click', () => {
-        siteNav.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', siteNav.classList.contains('open'));
-      });
-    }
-
-    /* Lightbox with navigation */
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const lightboxCounter = lightbox.querySelector('.lightbox-counter');
-    const items = Array.from(document.querySelectorAll('.artwork-item'));
-    let currentIndex = 0;
-
-    function showImage(index) {
-      const img = items[index].querySelector('img');
-      if (!img) return;
-      currentIndex = index;
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightboxCounter.textContent = (index + 1) + ' / ' + items.length;
-    }
-
-    function openLightbox(index) {
-      showImage(index);
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function prevImage() {
-      showImage(currentIndex > 0 ? currentIndex - 1 : items.length - 1);
-    }
-
-    function nextImage() {
-      showImage(currentIndex < items.length - 1 ? currentIndex + 1 : 0);
-    }
-
-    items.forEach((item, i) => {
-      item.addEventListener('click', () => openLightbox(i));
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target !== lightboxImg && !e.target.closest('.lightbox-prev') && !e.target.closest('.lightbox-next')) {
-        closeLightbox();
-      }
-    });
-
-    lightbox.querySelector('.lightbox-prev').addEventListener('click', prevImage);
-    lightbox.querySelector('.lightbox-next').addEventListener('click', nextImage);
-
-    document.addEventListener('keydown', (e) => {
-      if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') prevImage();
-      if (e.key === 'ArrowRight') nextImage();
-    });
-
-  </script>
+  <script src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/lightbox-init.js"></script>
 </body>
 </html>
